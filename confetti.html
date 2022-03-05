@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Confetti</title>
+		<style>
+			.center {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		</style>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+			integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="center">
+			<button class="pure-button pure-button-primary" id="btn">
+				Confetti
+			</button>
+		</div>
+		<script type="module" defer>
+			import confetti from "https://cdn.skypack.dev/canvas-confetti";
+			document.getElementById("btn").addEventListener("click", confetti);
+		</script>
+	</body>
+</html>
